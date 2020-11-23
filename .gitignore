@@ -1,0 +1,8 @@
+#untracked files
+*.exp
+*.ilk
+*.pdb
+*.exe
+*.lib
+*.dll
+.vs/
