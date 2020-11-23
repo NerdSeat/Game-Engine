@@ -6,3 +6,5 @@
 *.lib
 *.dll
 .vs/
+.git
+*bin*
