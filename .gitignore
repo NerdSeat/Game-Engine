@@ -7,4 +7,5 @@
 *.dll
 .vs/
 .git
-*bin*
+bin-int/*
+bin/*
