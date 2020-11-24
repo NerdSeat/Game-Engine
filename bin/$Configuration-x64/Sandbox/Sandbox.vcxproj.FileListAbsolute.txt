@@ -1,2 +1,0 @@
-C:\Projects\Game-Engine\bin\$Configuration-x64\Sandbox\Sandbox.exe
-C:\Projects\Game-Engine\bin\$Configuration-x64\Sandbox\Sandbox.pdb
