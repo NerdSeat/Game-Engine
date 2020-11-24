@@ -7,7 +7,7 @@
 		#define GAMEENGINE_API _declspec(dllimport)
 	#endif // GE_BUILD_DLL
 #else
-	#error only supports Windows
+	#error This game engine is only supported on Windows
 #endif
 
 
