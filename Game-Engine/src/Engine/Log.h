@@ -5,7 +5,6 @@
 #include <memory.h>
 namespace ge {
 
-
 	class GAMEENGINE_API Log
 	{
 	public:
