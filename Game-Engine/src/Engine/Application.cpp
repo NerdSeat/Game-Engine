@@ -1,3 +1,4 @@
+#include <gepch.h>
 #include "Application.h"
 #include "Engine/Event/Event.h"
 #include"Engine/Event/ApplicationEvent.h"
@@ -15,10 +16,7 @@ namespace ge {
 	void Application::Run()
 	{
 		WindowResizeEvent e(1920, 1080);
-		GE_CORE_TRACE(e);
-		while (true)
-		{
-
-		}
+		GE_TRACE(e);
+		while (true);
 	}
 }

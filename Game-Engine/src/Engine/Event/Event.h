@@ -1,7 +1,6 @@
 #pragma once
+
 #include "Engine/core.h"
-#include<string>
-#include<functional>
 
 namespace ge {
 
