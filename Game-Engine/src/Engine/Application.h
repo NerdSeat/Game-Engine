@@ -2,7 +2,6 @@
 #include "core.h"
 namespace ge {
 
-
 	class GAMEENGINE_API Application
 	{
 	public:

@@ -27,7 +27,8 @@ project "GameEngine"
 	}
 	includedirs
 	{
-		"%{prj.location}/vendor/spdlog/include"
+		"%{prj.location}/vendor/spdlog/include",
+		"%{prj.location}/src"
 	}
 	
 	filter "system:windows"
