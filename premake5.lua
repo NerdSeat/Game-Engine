@@ -1,36 +1,45 @@
 workspace "GameEngine"
 	architecture "x64"
-
+	startproject "Sandbox"
 configurations
 	{
 		"Debug",
 		"Release",
 		"Dist"
 	}
-	
-startproject "Sandbox"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+--Include directories relative to the solution folder
+IncludeDir = {}
+IncludeDir["GLFW"] = "Game-Engine/vendor/GLFW/include"
+include "Game-Engine/vendor/GLFW"
 
 project "GameEngine"
 	location "Game-Engine"
 	kind "SharedLib"
 	language "C++"
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("%{wks.location}/bin-int/" .. outputdir .. "/%{prj.name}")
 
 	pchheader "gepch.h"
 	pchsource "%{prj.location}/src/gepch.cpp"
+
 	files
 	{
 		"%{prj.location}/src/**.h",
-		"%{prj.location}/src/**.cpp",
+		"%{prj.location}/src/**.cpp"
 	}
 	includedirs
 	{
 		"%{prj.location}/vendor/spdlog/include",
-		"%{prj.location}/src"
+		"%{prj.location}/src",
+		"%{IncludeDir.GLFW}"
+	}
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 	
 	filter "system:windows"

@@ -2,7 +2,7 @@
 #ifdef GE_PLATFORM_WINDOWS
 #include <Windows.h>
 #endif // GE_PLATFORM_WINDOWS
-
+#include <Engine/Log.h>
 #include <memory>
 #include<sstream>
 #include<string>
