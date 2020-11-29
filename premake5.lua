@@ -20,7 +20,7 @@ project "GameEngine"
 	language "C++"
 
 	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("%{wks.location}/bin-int/" .. outputdir .. "/%{prj.name}")
+	objdir ("%{wks.location}/bin/obj/" .. outputdir .. "/%{prj.name}")
 
 	pchheader "gepch.h"
 	pchsource "%{prj.location}/src/gepch.cpp"
@@ -70,8 +70,8 @@ project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("%{wks.location}/bin/obj/" .. outputdir .. "/%{prj.name}")
 
 	files
 	{

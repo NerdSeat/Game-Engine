@@ -10,6 +10,7 @@ namespace ge {
 		Application();
 		virtual ~Application();
 		void Run();
+		void onEvent(Event& e);
 
 	private:
 		std::unique_ptr<Window> window;

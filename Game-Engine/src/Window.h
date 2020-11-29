@@ -10,7 +10,7 @@ namespace ge {
 		std::string title;
 		unsigned int height;
 		unsigned int width;
-		WindowProperties(const std::string& t = "Game Engine",unsigned int h=1080,unsigned int w = 1920)
+		WindowProperties(const std::string& t = "Game Engine",unsigned int h=720,unsigned int w = 1280)
 			:title(t),height(h),width(w){}
 
 	};

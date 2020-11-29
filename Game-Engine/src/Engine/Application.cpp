@@ -5,10 +5,12 @@
 #include <GLFW/glfw3.h>
 namespace ge {
 
+#define BIND_EVENT_FUNCTION(x) std::bind(&Application::x,this,std::placeholders::_1)
 
 	Application::Application()
 	{
 		window = std::unique_ptr<Window> (Window::Create());
+		window->SetEventCallback(BIND_EVENT_FUNCTION(onEvent));
 	}
 	Application::~Application()
 	{
@@ -22,5 +24,9 @@ namespace ge {
 			glClear(GL_COLOR_BUFFER_BIT);
 			window->onUpdate();
 		}
+	}
+	void Application::onEvent(Event& e)
+	{
+		GE_CORE_INFO("{0}", e);
 	}
 }
